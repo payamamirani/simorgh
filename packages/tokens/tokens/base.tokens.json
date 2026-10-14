@@ -1,0 +1,165 @@
+{
+  "simorgh": {
+    "space": {
+      "$type": "dimension",
+      "1": {
+        "$value": "0.25rem"
+      },
+      "2": {
+        "$value": "0.5rem"
+      },
+      "3": {
+        "$value": "0.75rem"
+      },
+      "4": {
+        "$value": "1rem"
+      },
+      "6": {
+        "$value": "1.5rem"
+      },
+      "8": {
+        "$value": "2rem"
+      },
+      "12": {
+        "$value": "3rem"
+      },
+      "16": {
+        "$value": "4rem"
+      }
+    },
+    "radius": {
+      "$type": "dimension",
+      "sm": {
+        "$value": "0.375rem"
+      },
+      "md": {
+        "$value": "0.5rem"
+      },
+      "lg": {
+        "$value": "0.75rem"
+      },
+      "full": {
+        "$value": "9999px"
+      }
+    },
+    "font": {
+      "family": {
+        "fa": {
+          "$type": "fontFamily",
+          "$value": [
+            "Vazirmatn",
+            "Tahoma",
+            "sans-serif"
+          ]
+        },
+        "latin": {
+          "$type": "fontFamily",
+          "$value": [
+            "Inter",
+            "Arial",
+            "sans-serif"
+          ]
+        },
+        "mono": {
+          "$type": "fontFamily",
+          "$value": [
+            "JetBrains Mono",
+            "monospace"
+          ]
+        }
+      },
+      "size": {
+        "$type": "dimension",
+        "display": {
+          "$value": "2.5rem"
+        },
+        "h1": {
+          "$value": "2rem"
+        },
+        "h2": {
+          "$value": "1.5rem"
+        },
+        "body": {
+          "$value": "1rem"
+        },
+        "caption": {
+          "$value": "0.875rem"
+        }
+      },
+      "weight": {
+        "$type": "fontWeight",
+        "regular": {
+          "$value": "400"
+        },
+        "medium": {
+          "$value": "500"
+        },
+        "bold": {
+          "$value": "700"
+        }
+      },
+      "lineHeight": {
+        "$type": "number",
+        "tight": {
+          "$value": 1.25
+        },
+        "normal": {
+          "$value": 1.6
+        },
+        "relaxed": {
+          "$value": 1.8
+        }
+      }
+    },
+    "shadow": {
+      "$type": "shadow",
+      "sm": {
+        "$value": [
+          {
+            "blur": "2px",
+            "spread": "0",
+            "color": "#0000000d",
+            "offsetX": "0",
+            "offsetY": "1px"
+          }
+        ]
+      },
+      "md": {
+        "$value": [
+          {
+            "blur": "6px",
+            "spread": "-1px",
+            "color": "#0000001a",
+            "offsetX": "0",
+            "offsetY": "4px"
+          },
+          {
+            "blur": "4px",
+            "spread": "-2px",
+            "color": "#0000001a",
+            "offsetX": "0",
+            "offsetY": "2px"
+          }
+        ]
+      },
+      "lg": {
+        "$value": [
+          {
+            "blur": "15px",
+            "spread": "-3px",
+            "color": "#0000001a",
+            "offsetX": "0",
+            "offsetY": "10px"
+          },
+          {
+            "blur": "6px",
+            "spread": "-4px",
+            "color": "#0000001a",
+            "offsetX": "0",
+            "offsetY": "4px"
+          }
+        ]
+      }
+    }
+  }
+}

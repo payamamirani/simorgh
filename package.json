@@ -1,0 +1,17 @@
+{
+  "name": "simorgh",
+  "version": "0.1.0",
+  "private": true,
+  "description": "سیستم دیزاین سیمرغ — monorepo شامل توکن‌ها و کامپوننت‌ها",
+  "packageManager": "pnpm@12.11.2",
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "build": "pnpm -r run build",
+    "test": "pnpm -r run test",
+    "typecheck": "pnpm -r run typecheck",
+    "storybook": "pnpm --filter @simorgh/ui storybook",
+    "build-storybook": "pnpm --filter @simorgh/ui build-storybook"
+  }
+}

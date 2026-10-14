@@ -1,0 +1,25 @@
+{
+  "name": "@simorgh/tokens",
+  "version": "0.1.0",
+  "description": "توکن‌های طراحی سیمرغ — منبع اصلی حقیقت (Single Source of Truth)",
+  "type": "module",
+  "exports": {
+    ".": {
+      "types": "./dist/js/tokens.d.ts",
+      "import": "./dist/js/tokens.mjs"
+    },
+    "./css": "./dist/css/vars.css",
+    "./css/palette": "./dist/css/palette.css",
+    "./css/dark": "./dist/css/dark.css",
+    "./css/tailwind": "./dist/css/tailwind.css"
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "node scripts/build.mjs"
+  },
+  "devDependencies": {
+    "style-dictionary": "^4.4.0"
+  }
+}

@@ -30,4 +30,4 @@ color.primary.900  → تیره‌ترین
 | `color.success.500` | TBD | پیام موفقیت |
 | `color.danger.500` | TBD | خطا |
 
-> ⚠️ مقدارها هنوز مشخص نشده‌اند. بعد از تصمیم نهایی در `tokens/tokens.json` ثبت شوند.
+> مقدارها در `packages/tokens/tokens/` تعریف شده‌اند: پالت خام در `palette.tokens.json` و نقش‌های معنایی (که کامپوننت‌ها استفاده می‌کنند) در `themes/light.tokens.json` و `themes/dark.tokens.json`.

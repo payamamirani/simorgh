@@ -1,0 +1,8 @@
+packages:
+  - "packages/*"
+
+# پکیج‌هایی که اجازه‌ی اجرای اسکریپت postinstall دارند
+allowBuilds:
+  '@bundled-es-modules/glob': true
+  esbuild: true
+  style-dictionary: true

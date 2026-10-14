@@ -1,0 +1,15 @@
+/*
+ * نقطه‌ی ورود استایل‌های سیمرغ.
+ * توکن‌ها از @simorgh/tokens می‌آیند (منبع اصلی حقیقت) —
+ * هیچ مقدار رنگ/فاصله/فونتی در این پکیج به‌صورت خام نوشته نمی‌شود.
+ */
+@import "tailwindcss";
+@import "@simorgh/tokens/css";
+@import "@simorgh/tokens/css/dark";
+@import "@simorgh/tokens/css/tailwind";
+
+/* فونت پایه — direction-aware */
+body {
+  font-family: var(--simorgh-font-family-fa);
+  text-align: start;
+}
