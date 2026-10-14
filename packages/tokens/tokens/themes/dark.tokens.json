@@ -1,46 +1,19 @@
 {
   "simorgh": {
     "color": {
-      "primary": {
-        "$type": "color",
-        "$value": "{simorgh.palette.color.teal.400}"
-      },
-      "primary-hover": {
-        "$value": "{simorgh.palette.color.teal.300}"
-      },
-      "on-primary": {
-        "$value": "{simorgh.palette.color.teal.950}"
-      },
-      "surface": {
-        "$value": "{simorgh.palette.color.neutral.950}"
-      },
-      "surface-raised": {
-        "$value": "{simorgh.palette.color.neutral.900}"
-      },
-      "text": {
-        "$value": "{simorgh.palette.color.neutral.50}"
-      },
-      "text-muted": {
-        "$value": "{simorgh.palette.color.neutral.400}"
-      },
-      "border": {
-        "$value": "{simorgh.palette.color.neutral.700}"
-      },
-      "border-strong": {
-        "$value": "{simorgh.palette.color.neutral.600}"
-      },
-      "success": {
-        "$value": "{simorgh.palette.color.green.400}"
-      },
-      "warning": {
-        "$value": "{simorgh.palette.color.amber.400}"
-      },
-      "danger": {
-        "$value": "{simorgh.palette.color.red.400}"
-      },
-      "info": {
-        "$value": "{simorgh.palette.color.sky.400}"
-      }
+      "primary": { "$type": "color", "$value": "{simorgh.palette.color.teal.300}" },
+      "primary-hover": { "$value": "{simorgh.palette.color.teal.200}" },
+      "on-primary": { "$value": "{simorgh.palette.color.teal.950}" },
+      "surface": { "$value": "{simorgh.palette.color.neutral.950}" },
+      "surface-raised": { "$value": "{simorgh.palette.color.neutral.900}" },
+      "text": { "$value": "{simorgh.palette.color.neutral.50}" },
+      "text-muted": { "$value": "{simorgh.palette.color.neutral.400}" },
+      "border": { "$value": "{simorgh.palette.color.neutral.700}" },
+      "border-strong": { "$value": "{simorgh.palette.color.neutral.600}" },
+      "success": { "$value": "{simorgh.palette.color.green.400}" },
+      "warning": { "$value": "{simorgh.palette.color.amber.400}" },
+      "danger": { "$value": "{simorgh.palette.color.red.400}" },
+      "info": { "$value": "{simorgh.palette.color.slate.400}" }
     }
   }
 }
