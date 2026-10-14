@@ -51,6 +51,10 @@ const pairs = [
   ['روشن', light, ['warning', 'surface']],
   ['روشن', light, ['danger', 'surface']],
   ['روشن', light, ['info', 'surface']],
+  ['روشن', light, ['on-success', 'success']],
+  ['روشن', light, ['on-warning', 'warning']],
+  ['روشن', light, ['on-danger', 'danger']],
+  ['روشن', light, ['on-info', 'info']],
   ['تیره', dark, ['text', 'surface']],
   ['تیره', dark, ['text-muted', 'surface']],
   ['تیره', dark, ['text', 'surface-raised']],
@@ -60,6 +64,10 @@ const pairs = [
   ['تیره', dark, ['warning', 'surface']],
   ['تیره', dark, ['danger', 'surface']],
   ['تیره', dark, ['info', 'surface']],
+  ['تیره', dark, ['on-success', 'success']],
+  ['تیره', dark, ['on-warning', 'warning']],
+  ['تیره', dark, ['on-danger', 'danger']],
+  ['تیره', dark, ['on-info', 'info']],
 ];
 
 const MIN = 4.5;

@@ -81,8 +81,10 @@ pnpm test
 - [x] سیستم فاصله‌گذاری و شبکه (Grid)
 - [x] توکن‌های پایه (رنگ، فونت، سایه، شعاع گوشه)
 - [x] زیرساخت: monorepo + خط لوله‌ی توکن + Storybook + CI
-- [ ] کامپوننت‌های سطح اول (Button ✅، Input، Text، Stack، Icon)
-- [ ] کامپوننت‌های ترکیبی (Card، Modal، ...)
+- [x] پالت رنگ نسخه ۱ (فیروزه‌ای ملایم + خاکستری گرم + چک خودکار کنتراست WCAG)
+- [x] کامپوننت‌های سطح اول: Button، Input، Text، Heading، Stack، Icon (+۴ آیکون)، Badge
+- [x] کامپوننت ترکیبی: Card
+- [ ] کامپوننت‌های سطح بعد: Modal، Select، Checkbox، Textarea، Field (فرم)
 - [ ] تست بصری (Chromatic)
 - [ ] انتشار پکیج‌ها به npm
 

@@ -13,7 +13,11 @@
       "success": { "$value": "{simorgh.palette.color.green.600}" },
       "warning": { "$value": "{simorgh.palette.color.amber.700}" },
       "danger": { "$value": "{simorgh.palette.color.red.600}" },
-      "info": { "$value": "{simorgh.palette.color.slate.600}" }
+      "info": { "$value": "{simorgh.palette.color.slate.600}" },
+      "on-success": { "$value": "{simorgh.palette.color.neutral.0}" },
+      "on-warning": { "$value": "{simorgh.palette.color.neutral.0}" },
+      "on-danger": { "$value": "{simorgh.palette.color.neutral.0}" },
+      "on-info": { "$value": "{simorgh.palette.color.neutral.0}" }
     }
   }
 }
