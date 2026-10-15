@@ -31,7 +31,7 @@ const AccordionTrigger = forwardRef<HTMLButtonElement, AccordionPrimitive.Accord
         className={cn(
           'flex flex-1 items-center justify-between gap-4 py-4 text-start',
           'text-body font-medium text-text transition-colors hover:text-primary',
-          'focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary/25',
+          'focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-focus-ring',
           className,
         )}
         {...props}

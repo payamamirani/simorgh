@@ -9,7 +9,7 @@ export interface CheckboxProps
   label?: ReactNode;
   /** توضیح تکمیلی زیر لیبل */
   description?: string;
-  /** حالت خطا — aria-invalid تنظیم می‌کند و رنگ danger می‌گیرد */
+  /** حالت خطا — aria-invalid تنظیم می‌کند و رنگ error می‌گیرد */
   invalid?: boolean;
 }
 
@@ -17,11 +17,11 @@ const root =
   'peer size-5 shrink-0 rounded-sm border border-border-strong bg-surface-raised ' +
   'mt-0.5 transition-colors motion-reduce:transition-none ' +
   'hover:border-primary ' +
-  'focus-visible:border-primary focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary/25 ' +
+  'focus-visible:border-border-focus focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-focus-ring ' +
   'data-[state=checked]:border-primary data-[state=checked]:bg-primary ' +
   'data-[state=indeterminate]:border-primary data-[state=indeterminate]:bg-primary ' +
-  'aria-invalid:border-danger aria-invalid:data-[state=checked]:border-danger aria-invalid:data-[state=checked]:bg-danger ' +
-  'aria-invalid:data-[state=indeterminate]:border-danger aria-invalid:data-[state=indeterminate]:bg-danger ' +
+  'aria-invalid:border-error aria-invalid:data-[state=checked]:border-error aria-invalid:data-[state=checked]:bg-error ' +
+  'aria-invalid:data-[state=indeterminate]:border-error aria-invalid:data-[state=indeterminate]:bg-error ' +
   'disabled:cursor-not-allowed disabled:opacity-60';
 
 export const Checkbox = forwardRef<HTMLButtonElement, CheckboxProps>(

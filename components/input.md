@@ -13,7 +13,7 @@
 | نام | نوع | پیش‌فرض | توضیح |
 |---|---|---|---|
 | `size` | `sm` \| `md` \| `lg` | `md` | اندازه (با Button هم‌تراز) |
-| `invalid` | `boolean` | `false` | حالت خطا — `aria-invalid` تنظیم و رنگ `danger` اعمال می‌شود |
+| `invalid` | `boolean` | `false` | حالت خطا — `aria-invalid` تنظیم و رنگ `error` اعمال می‌شود |
 | `type` | `string` | `text` | نوع ورودی (email, password, search, ...) |
 | `...props` | `InputHTMLAttributes` | — | بقیه‌ی prop های استاندارد (`id`, `name`, `disabled`, ...) پاس می‌شوند |
 
@@ -44,5 +44,5 @@
 
 - `color.border` / `color.border-strong` / `color.surface-raised`
 - `color.text` / `color.text-muted` (placeholder)
-- `color.primary` (focus) / `color.danger` (invalid)
+- `color.primary` (focus) / `color.error` (invalid)
 - `radius.md` / `font.size.body` / `font.size.caption`

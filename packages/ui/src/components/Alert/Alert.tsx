@@ -7,7 +7,7 @@ import {
   InfoIcon,
 } from '../Icon/icons';
 
-export type AlertTone = 'success' | 'warning' | 'danger' | 'info';
+export type AlertTone = 'success' | 'warning' | 'error' | 'info';
 
 export interface AlertProps extends Omit<HTMLAttributes<HTMLDivElement>, 'title'> {
   tone?: AlertTone;
@@ -20,23 +20,23 @@ export interface AlertProps extends Omit<HTMLAttributes<HTMLDivElement>, 'title'
 }
 
 const tones: Record<AlertTone, string> = {
-  success: 'bg-success/10',
-  warning: 'bg-warning/10',
-  danger: 'bg-danger/10',
-  info: 'bg-info/10',
+  success: 'bg-success-subtle',
+  warning: 'bg-warning-subtle',
+  error: 'bg-error-subtle',
+  info: 'bg-info-subtle',
 };
 
 const iconTones: Record<AlertTone, string> = {
   success: 'text-success',
   warning: 'text-warning',
-  danger: 'text-danger',
+  error: 'text-error',
   info: 'text-info',
 };
 
 const defaultIcons: Record<AlertTone, ReactNode> = {
   success: <CheckIcon />,
   warning: <AlertTriangleIcon />,
-  danger: <AlertCircleIcon />,
+  error: <AlertCircleIcon />,
   info: <InfoIcon />,
 };
 
@@ -44,7 +44,7 @@ const defaultIcons: Record<AlertTone, ReactNode> = {
 const roles: Record<AlertTone, string> = {
   success: 'status',
   warning: 'status',
-  danger: 'alert',
+  error: 'alert',
   info: 'status',
 };
 

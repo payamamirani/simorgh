@@ -15,7 +15,7 @@ describe('Toast', () => {
   it('خطا نقش alert دارد', async () => {
     render(<Toaster />);
     await act(async () => {
-      toast({ title: 'پرداخت ناموفق', tone: 'danger' });
+      toast({ title: 'پرداخت ناموفق', tone: 'error' });
     });
     expect(await screen.findByRole('alert')).toHaveTextContent('پرداخت ناموفق');
   });

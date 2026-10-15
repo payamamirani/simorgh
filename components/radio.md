@@ -12,7 +12,7 @@
 
 | نام | نوع | توضیح |
 |---|---|---|
-| `invalid` | `boolean` | `aria-invalid` روی کل گروه + رنگ danger |
+| `invalid` | `boolean` | `aria-invalid` روی کل گروه + رنگ error |
 | `...props` | Radix RadioGroupProps | `value` / `defaultValue` / `onValueChange` / `orientation` |
 
 **Radio** (آیتم): `value` · `label` · `description` · `disabled`
@@ -25,4 +25,4 @@
 
 ## توکن‌های استفاده‌شده
 
-`color.primary` / `color.border-strong` / `color.danger` · `radius.full`
+`color.primary` / `color.border-strong` / `color.error` · `radius.full`

@@ -57,7 +57,7 @@ export const WithLabelAndError: Story = {
         aria-describedby="email-error"
         dir="ltr"
       />
-      <p id="email-error" className="text-caption text-danger">
+      <p id="email-error" className="text-caption text-error">
         فرمت ایمیل معتبر نیست.
       </p>
     </div>

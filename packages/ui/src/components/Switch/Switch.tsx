@@ -7,16 +7,16 @@ export interface SwitchProps extends Omit<SwitchPrimitive.SwitchProps, 'children
   label?: ReactNode;
   /** توضیح تکمیلی زیر لیبل */
   description?: string;
-  /** حالت خطا — aria-invalid + رنگ danger */
+  /** حالت خطا — aria-invalid + رنگ error */
   invalid?: boolean;
 }
 
 const root =
   'peer mt-0.5 inline-flex h-6 w-11 shrink-0 items-center rounded-full border border-transparent ' +
   'bg-border-strong transition-colors motion-reduce:transition-none ' +
-  'focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary/25 ' +
+  'focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-focus-ring ' +
   'data-[state=checked]:bg-primary ' +
-  'aria-invalid:data-[state=checked]:bg-danger ' +
+  'aria-invalid:data-[state=checked]:bg-error ' +
   'disabled:cursor-not-allowed disabled:opacity-60';
 
 const thumb =

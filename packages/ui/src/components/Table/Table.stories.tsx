@@ -25,7 +25,7 @@ const orders = [
   { id: '۲۴۵۱', customer: 'سیمرغ ایرانی', status: 'در حال پردازش', tone: 'info' as const, total: '۱٬۲۰۰٬۰۰۰' },
   { id: '۲۴۵۰', customer: 'پروین اعتصامی', status: 'تحویل شده', tone: 'success' as const, total: '۸۹۰٬۰۰۰' },
   { id: '۲۴۴۹', customer: 'سهراب سپهری', status: 'در انتظار پرداخت', tone: 'warning' as const, total: '۲٬۴۵۰٬۰۰۰' },
-  { id: '۲۴۴۸', customer: 'فروغ فرخزاد', status: 'لغو شده', tone: 'danger' as const, total: '۵۶۰٬۰۰۰' },
+  { id: '۲۴۴۸', customer: 'فروغ فرخزاد', status: 'لغو شده', tone: 'error' as const, total: '۵۶۰٬۰۰۰' },
 ];
 
 export const Playground: Story = {
@@ -59,7 +59,7 @@ export const Playground: Story = {
                   </DropdownMenu.Trigger>
                   <DropdownMenu.Content align="end">
                     <DropdownMenu.Item>مشاهده جزئیات</DropdownMenu.Item>
-                    <DropdownMenu.Item tone="danger">لغو</DropdownMenu.Item>
+                    <DropdownMenu.Item tone="error">لغو</DropdownMenu.Item>
                   </DropdownMenu.Content>
                 </DropdownMenu>
               </Table.Cell>

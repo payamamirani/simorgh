@@ -12,7 +12,7 @@
 |---|---|---|---|
 | `label` | `ReactNode` | — | متن کنار چک‌باکس (کلیک = تاگل) |
 | `description` | `string` | — | توضیح ریز زیر لیبل |
-| `invalid` | `boolean` | `false` | حالت خطا — `aria-invalid` + رنگ danger |
+| `invalid` | `boolean` | `false` | حالت خطا — `aria-invalid` + رنگ error |
 | `checked` | `boolean` \| `'indeterminate'` | — | کنترل‌شده؛ حالت سوم برای «بخشی انتخاب‌شده» |
 | `...props` | Radix CheckboxProps | — | `onCheckedChange`, `defaultChecked`, `disabled`, ... |
 
@@ -28,4 +28,4 @@
 
 ## توکن‌های استفاده‌شده
 
-`color.primary` / `color.on-primary` / `color.border-strong` / `color.danger` · `radius.sm`
+`color.primary` / `color.on-primary` / `color.border-strong` / `color.error` · `radius.sm`

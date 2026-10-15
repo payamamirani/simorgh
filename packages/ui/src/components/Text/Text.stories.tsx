@@ -19,7 +19,7 @@ const meta = {
     weight: { control: 'select', options: ['regular', 'medium', 'bold'] },
     tone: {
       control: 'select',
-      options: ['default', 'muted', 'primary', 'success', 'warning', 'danger', 'info'],
+      options: ['default', 'muted', 'primary', 'success', 'warning', 'error', 'info'],
     },
     leading: { control: 'select', options: ['normal', 'tight', 'relaxed'] },
     as: { control: 'select', options: ['p', 'span', 'div', 'strong', 'small', 'label'] },
@@ -45,7 +45,7 @@ export const Tones: Story = {
       <Text tone="primary">متن فیروزه‌ای</Text>
       <Text tone="success">پیام موفقیت</Text>
       <Text tone="warning">پیام هشدار</Text>
-      <Text tone="danger">پیام خطا</Text>
+      <Text tone="error">پیام خطا</Text>
       <Text tone="info">پیام اطلاع‌رسانی</Text>
     </div>
   ),

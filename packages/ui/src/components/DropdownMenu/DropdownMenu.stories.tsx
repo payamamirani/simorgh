@@ -13,7 +13,7 @@ const meta = {
     docs: {
       description: {
         component:
-          'منوی اکشن‌ها — باز شدن با کلیک، ناوبری با فلش‌ها، بستن با Escape. آیتم مخرب با tone="danger".',
+          'منوی اکشن‌ها — باز شدن با کلیک، ناوبری با فلش‌ها، بستن با Escape. آیتم مخرب با tone="error".',
       },
     },
   },
@@ -39,7 +39,7 @@ export const Playground: Story = {
           افزودن یادداشت
         </DropdownMenu.Item>
         <DropdownMenu.Separator />
-        <DropdownMenu.Item tone="danger">
+        <DropdownMenu.Item tone="error">
           <XIcon size="sm" />
           لغو سفارش
         </DropdownMenu.Item>

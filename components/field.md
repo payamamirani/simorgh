@@ -20,7 +20,7 @@
 
 - `label htmlFor` → کنترل (کلیک لیبل فوکس می‌دهد)
 - `aria-describedby` → پیام خطا/راهنما (صفحه‌خوان می‌خواند)
-- `aria-invalid` → هنگام خطا (استایل danger هم از همین فعال می‌شود)
+- `aria-invalid` → هنگام خطا (استایل error هم از همین فعال می‌شود)
 - id های یکتا با `useId` — چند فرم در یک صفحه بدون تداخل
 
 ## نکات استفاده
@@ -31,4 +31,4 @@
 
 ## توکن‌های استفاده‌شده
 
-`color.text` / `color.text-muted` / `color.danger` · `font.size.caption` · `space.2`
+`color.text` / `color.text-muted` / `color.error` · `font.size.caption` · `space.2`

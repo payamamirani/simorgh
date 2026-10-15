@@ -19,7 +19,7 @@ const meta = {
   argTypes: {
     tone: {
       control: 'select',
-      options: ['neutral', 'primary', 'success', 'warning', 'danger', 'info'],
+      options: ['neutral', 'primary', 'success', 'warning', 'error', 'info'],
     },
     variant: { control: 'select', options: ['soft', 'solid'] },
   },
@@ -42,7 +42,7 @@ export const AllTones: Story = {
         <Badge tone="primary">اصلی</Badge>
         <Badge tone="success">موفق</Badge>
         <Badge tone="warning">هشدار</Badge>
-        <Badge tone="danger">خطا</Badge>
+        <Badge tone="error">خطا</Badge>
         <Badge tone="info">اطلاع</Badge>
       </Stack>
       <Stack direction="row" gap="3" align="center">
@@ -59,7 +59,7 @@ export const AllTones: Story = {
         <Badge tone="warning" variant="solid">
           هشدار
         </Badge>
-        <Badge tone="danger" variant="solid">
+        <Badge tone="error" variant="solid">
           خطا
         </Badge>
         <Badge tone="info" variant="solid">
@@ -77,7 +77,7 @@ export const StatusExample: Story = {
       <Badge tone="info">در حال پردازش</Badge>
       <Badge tone="warning">در انتظار پرداخت</Badge>
       <Badge tone="success">تحویل شده</Badge>
-      <Badge tone="danger">لغو شده</Badge>
+      <Badge tone="error">لغو شده</Badge>
     </Stack>
   ),
 };

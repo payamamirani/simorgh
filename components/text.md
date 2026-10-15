@@ -13,7 +13,7 @@
 | `as` | `p` \| `span` \| `div` \| `strong` \| `em` \| `small` \| `label` | `p` | تگ HTML |
 | `size` | `body` \| `caption` | `body` | اندازه |
 | `weight` | `regular` \| `medium` \| `bold` | `regular` | وزن |
-| `tone` | `default` \| `muted` \| `primary` \| `success` \| `warning` \| `danger` \| `info` | `default` | رنگ معنایی |
+| `tone` | `default` \| `muted` \| `primary` \| `success` \| `warning` \| `error` \| `info` | `default` | رنگ معنایی |
 | `leading` | `normal` \| `tight` \| `relaxed` | `normal` | ارتفاع خط — فارسی: `relaxed` |
 
 ## نکات استفاده

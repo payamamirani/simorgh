@@ -15,7 +15,8 @@
     "build-storybook": "pnpm --filter @simorgh/ui build-storybook",
     "changeset": "changeset",
     "version-packages": "changeset version",
-    "release": "pnpm build && changeset publish"
+    "release": "pnpm build && changeset publish",
+    "chromatic": "npx chromatic --project-token=chpt_3a75a4bb6b6caf7"
   },
   "devDependencies": {
     "@changesets/cli": "^3.0.3"

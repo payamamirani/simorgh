@@ -10,14 +10,14 @@
 
 | نام | نوع | پیش‌فرض | توضیح |
 |---|---|---|---|
-| `tone` | `success` \| `warning` \| `danger` \| `info` | `info` | رنگ معنایی |
+| `tone` | `success` \| `warning` \| `error` \| `info` | `info` | رنگ معنایی |
 | `title` | `ReactNode` | — | تیتر کوتاه |
 | `children` | `ReactNode` | — | متن توضیح |
 | `icon` | `ReactNode` | بر اساس tone | آیکون سفارشی |
 
 ## دسترس‌پذیری
 
-- `danger` → `role="alert"` (بلافاصله توسط صفحه‌خوان اعلام می‌شود)
+- `error` → `role="alert"` (بلافاصله توسط صفحه‌خوان اعلام می‌شود)
 - بقیه → `role="status"` (اعلام ملایم)
 
 ## نکات استفاده

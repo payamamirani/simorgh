@@ -14,7 +14,7 @@ describe('DropdownMenu', () => {
         </DropdownMenu.Trigger>
         <DropdownMenu.Content>
           <DropdownMenu.Item>ویرایش</DropdownMenu.Item>
-          <DropdownMenu.Item tone="danger">حذف</DropdownMenu.Item>
+          <DropdownMenu.Item tone="error">حذف</DropdownMenu.Item>
         </DropdownMenu.Content>
       </DropdownMenu>,
     );

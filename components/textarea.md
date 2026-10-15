@@ -10,7 +10,7 @@
 
 | نام | نوع | پیش‌فرض | توضیح |
 |---|---|---|---|
-| `invalid` | `boolean` | `false` | حالت خطا — `aria-invalid` + رنگ danger |
+| `invalid` | `boolean` | `false` | حالت خطا — `aria-invalid` + رنگ error |
 | `...props` | `TextareaHTMLAttributes` | — | همه‌ی prop های استاندارد (`rows`, `maxLength`, ...) |
 
 ## نکات استفاده

@@ -42,6 +42,9 @@ const preview: Preview = {
       root.setAttribute('data-theme', theme ?? 'light');
       root.setAttribute('dir', dir ?? 'rtl');
       root.setAttribute('lang', dir === 'ltr' ? 'en' : 'fa');
+      // پس‌زمینه و متن بوم Storybook از توکن‌های تم فعال
+      document.body.style.backgroundColor = 'var(--simorgh-color-background)';
+      document.body.style.color = 'var(--simorgh-color-text-primary)';
       return <Story />;
     },
   ],

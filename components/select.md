@@ -11,7 +11,7 @@
 | نام | نوع | پیش‌فرض | توضیح |
 |---|---|---|---|
 | `size` | `sm` \| `md` \| `lg` | `md` | اندازه (هم‌تراز با Button/Input) |
-| `invalid` | `boolean` | `false` | حالت خطا — `aria-invalid` + رنگ danger |
+| `invalid` | `boolean` | `false` | حالت خطا — `aria-invalid` + رنگ error |
 | `placeholder` | `string` | — | گزینه‌ی اولِ غیرقابل‌انتخاب |
 | `children` | `<option>` ها | — | گزینه‌ها |
 

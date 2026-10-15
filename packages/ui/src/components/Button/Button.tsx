@@ -20,15 +20,15 @@ export interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
 const base =
   'inline-flex select-none items-center justify-center gap-2 rounded-md font-medium ' +
   'transition-colors motion-reduce:transition-none ' +
-  'focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary ' +
+  'focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-focus-ring ' +
   'focus-visible:ring-offset-2 focus-visible:ring-offset-surface ' +
   'disabled:pointer-events-none disabled:opacity-50';
 
 const variants: Record<ButtonVariant, string> = {
   primary: 'bg-primary text-on-primary hover:bg-primary-hover',
   secondary:
-    'border border-border bg-surface-raised text-text hover:bg-border hover:border-border-strong',
-  ghost: 'bg-transparent text-primary hover:bg-primary/10',
+    'border border-border bg-surface-raised text-text hover:bg-surface-sunken hover:border-border-strong',
+  ghost: 'bg-transparent text-primary hover:bg-primary-subtle',
 };
 
 const sizes: Record<ButtonSize, string> = {

@@ -39,7 +39,7 @@ const TabsTrigger = forwardRef<HTMLButtonElement, TabsPrimitive.TabsTriggerProps
         'text-body font-medium text-text-muted transition-colors motion-reduce:transition-none',
         'hover:text-text',
         'data-[state=active]:border-primary data-[state=active]:text-text',
-        'focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary/25',
+        'focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-focus-ring',
         className,
       )}
       {...props}

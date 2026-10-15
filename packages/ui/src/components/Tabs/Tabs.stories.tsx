@@ -52,7 +52,7 @@ export const WithBadge: Story = {
       <Tabs.List>
         <Tabs.Trigger value="inbox">
           صندوق ورودی
-          <Badge tone="danger" variant="solid">
+          <Badge tone="error" variant="solid">
             ۳
           </Badge>
         </Tabs.Trigger>

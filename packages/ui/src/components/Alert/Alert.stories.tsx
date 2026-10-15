@@ -16,7 +16,7 @@ const meta = {
     },
   },
   argTypes: {
-    tone: { control: 'select', options: ['success', 'warning', 'danger', 'info'] },
+    tone: { control: 'select', options: ['success', 'warning', 'error', 'info'] },
   },
 } satisfies Meta<typeof Alert>;
 
@@ -42,7 +42,7 @@ export const AllTones: Story = {
       <Alert tone="warning" title="سقف مصرف نزدیک است">
         ۸۵٪ از سهمیه‌ی ماهانه استفاده کرده‌اید.
       </Alert>
-      <Alert tone="danger" title="پرداخت ناموفق">
+      <Alert tone="error" title="پرداخت ناموفق">
         ارتباط با درگاه برقرار نشد. لطفاً دوباره تلاش کنید یا کارت دیگری را امتحان کنید.
       </Alert>
       <Alert tone="info" title="تغییر ساعت کاری پشتیبانی">

@@ -45,10 +45,10 @@ simorgh/
 ## معماری توکن (دو لایه)
 
 ```
-palette.tokens.json  ← مخزن خام رنگ‌ها (هرگز مستقیم استفاده نمی‌شود)
-        ↓ ارجاع
-themes/light.json    ← نقش‌ها: primary, surface, text, border, ...
-themes/dark.json     ← همین نقش‌ها با مقادیر مناسب تم تیره
+palette.tokens.json  ← ۱۰ خانواده × ۱۰ سطح (teal, gold, sky-blue, charcoal,
+        ↓ ارجاع       midnight-navy, green, amber, red, slate, violet) — HSLA
+themes/light.json    ← نقش‌ها: primary, secondary, accent, text.*, surface.*, ...
+themes/dark.json     ← همین نقش‌ها با مپینگ مناسب تم تیره (سرمه‌ای نیمه‌شب)
         ↓ Style Dictionary
 dist/css/vars.css        → :root { --simorgh-color-primary: ... }
 dist/css/dark.css        → [data-theme="dark"] { --simorgh-color-primary: ... }
@@ -81,7 +81,7 @@ pnpm test
 - [x] سیستم فاصله‌گذاری و شبکه (Grid)
 - [x] توکن‌های پایه (رنگ، فونت، سایه، شعاع گوشه)
 - [x] زیرساخت: monorepo + خط لوله‌ی توکن + Storybook + CI
-- [x] پالت رنگ نسخه ۱ (فیروزه‌ای ملایم + خاکستری گرم + چک خودکار کنتراست WCAG)
+- [x] پالت رنگ نسخه ۲ (برند جدید: Teal/Gold/Sky-blue/Charcoal/Midnight-navy/Green/Amber/Red/Slate/Violet + چک خودکار ۵۶ جفت کنتراست WCAG)
 - [x] کامپوننت‌های سطح اول: Button، Input، Text، Heading، Stack، Icon (+۵ آیکون)، Badge
 - [x] کامپوننت ترکیبی: Card
 - [x] کامپوننت‌های فرم: Field، Textarea، Select، Checkbox (Radix)

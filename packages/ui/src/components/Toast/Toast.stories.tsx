@@ -30,7 +30,7 @@ export const Playground: Story = {
       </Button>
       <Button
         variant="secondary"
-        onClick={() => toast({ title: 'پرداخت ناموفق', tone: 'danger', description: 'اتصال به درگاه برقرار نشد.' })}
+        onClick={() => toast({ title: 'پرداخت ناموفق', tone: 'error', description: 'اتصال به درگاه برقرار نشد.' })}
       >
         خطا
       </Button>

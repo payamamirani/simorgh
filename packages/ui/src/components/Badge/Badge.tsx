@@ -1,7 +1,7 @@
 import { forwardRef, type HTMLAttributes } from 'react';
 import { cn } from '../../utils/cn';
 
-export type BadgeTone = 'neutral' | 'primary' | 'success' | 'warning' | 'danger' | 'info';
+export type BadgeTone = 'neutral' | 'primary' | 'success' | 'warning' | 'error' | 'info';
 export type BadgeVariant = 'soft' | 'solid';
 
 export interface BadgeProps extends HTMLAttributes<HTMLSpanElement> {
@@ -11,11 +11,11 @@ export interface BadgeProps extends HTMLAttributes<HTMLSpanElement> {
 
 const soft: Record<BadgeTone, string> = {
   neutral: 'bg-text/10 text-text',
-  primary: 'bg-primary/12 text-primary',
-  success: 'bg-success/12 text-success',
-  warning: 'bg-warning/12 text-warning',
-  danger: 'bg-danger/12 text-danger',
-  info: 'bg-info/12 text-info',
+  primary: 'bg-primary-subtle text-primary',
+  success: 'bg-success-subtle text-success',
+  warning: 'bg-warning-subtle text-warning',
+  error: 'bg-error-subtle text-error',
+  info: 'bg-info-subtle text-info',
 };
 
 /** رنگ متن هر حالت solid از توکن‌های on-* می‌آید — کنتراست در بیلد چک می‌شود */
@@ -24,7 +24,7 @@ const solid: Record<BadgeTone, string> = {
   primary: 'bg-primary text-on-primary',
   success: 'bg-success text-on-success',
   warning: 'bg-warning text-on-warning',
-  danger: 'bg-danger text-on-danger',
+  error: 'bg-error text-on-error',
   info: 'bg-info text-on-info',
 };
 

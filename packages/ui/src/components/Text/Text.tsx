@@ -1,7 +1,7 @@
 import { forwardRef, type ElementType, type HTMLAttributes } from 'react';
 import { cn } from '../../utils/cn';
 
-export type TextTone = 'default' | 'muted' | 'primary' | 'success' | 'warning' | 'danger' | 'info';
+export type TextTone = 'default' | 'muted' | 'primary' | 'success' | 'warning' | 'error' | 'info';
 export type TextWeight = 'regular' | 'medium' | 'bold';
 export type TextLeading = 'normal' | 'tight' | 'relaxed';
 export type TextSize = 'body' | 'caption';
@@ -22,7 +22,7 @@ const tones: Record<TextTone, string> = {
   primary: 'text-primary',
   success: 'text-success',
   warning: 'text-warning',
-  danger: 'text-danger',
+  error: 'text-error',
   info: 'text-info',
 };
 

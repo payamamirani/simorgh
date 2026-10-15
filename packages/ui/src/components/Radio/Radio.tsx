@@ -28,9 +28,9 @@ const itemRoot =
   'peer size-5 mt-0.5 shrink-0 rounded-full border border-border-strong bg-surface-raised ' +
   'transition-colors motion-reduce:transition-none ' +
   'hover:border-primary ' +
-  'focus-visible:border-primary focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary/25 ' +
+  'focus-visible:border-border-focus focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-focus-ring ' +
   'data-[state=checked]:border-primary ' +
-  'aria-invalid:border-danger ' +
+  'aria-invalid:border-error ' +
   'disabled:cursor-not-allowed disabled:opacity-60';
 
 export const RadioGroup = forwardRef<HTMLDivElement, RadioGroupProps>(

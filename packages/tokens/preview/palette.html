@@ -3,166 +3,220 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>پالت رنگی سیمرغ — پیش‌نمایش</title>
+<title>سیستم رنگ سیمرغ — نسخه ۲</title>
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;500;700&display=swap" rel="stylesheet" />
 <style>
+  :root {
+    /* پالت خام — همان مقادیر palette.tokens.json */
+    --teal-50: hsla(183, 84%, 96%, 1); --teal-100: hsla(183, 80%, 90%, 1); --teal-200: hsla(183, 76%, 80%, 1); --teal-300: hsla(183, 80%, 66%, 1); --teal-400: hsla(183, 82%, 52%, 1); --teal-500: hsla(183, 84%, 36%, 1); --teal-600: hsla(183, 82%, 30%, 1); --teal-700: hsla(183, 80%, 24%, 1); --teal-800: hsla(183, 78%, 18%, 1); --teal-900: hsla(183, 76%, 12%, 1);
+    --gold-50: hsla(42, 91%, 96%, 1); --gold-100: hsla(42, 88%, 90%, 1); --gold-200: hsla(42, 88%, 80%, 1); --gold-300: hsla(42, 90%, 68%, 1); --gold-400: hsla(42, 91%, 61%, 1); --gold-500: hsla(42, 87%, 52%, 1); --gold-600: hsla(42, 82%, 44%, 1); --gold-700: hsla(42, 78%, 36%, 1); --gold-800: hsla(42, 72%, 28%, 1); --gold-900: hsla(42, 66%, 20%, 1);
+    --sky-blue-50: hsla(210, 88%, 96%, 1); --sky-blue-100: hsla(210, 84%, 90%, 1); --sky-blue-200: hsla(210, 82%, 80%, 1); --sky-blue-300: hsla(210, 85%, 68%, 1); --sky-blue-400: hsla(210, 88%, 59%, 1); --sky-blue-500: hsla(210, 82%, 50%, 1); --sky-blue-600: hsla(210, 76%, 42%, 1); --sky-blue-700: hsla(210, 72%, 34%, 1); --sky-blue-800: hsla(210, 68%, 26%, 1); --sky-blue-900: hsla(210, 64%, 18%, 1);
+    --charcoal-50: hsla(216, 15%, 96%, 1); --charcoal-100: hsla(216, 15%, 92%, 1); --charcoal-200: hsla(216, 15%, 85%, 1); --charcoal-300: hsla(216, 14%, 74%, 1); --charcoal-400: hsla(216, 13%, 60%, 1); --charcoal-500: hsla(216, 14%, 47%, 1); --charcoal-600: hsla(216, 15%, 36%, 1); --charcoal-700: hsla(216, 15%, 24%, 1); --charcoal-800: hsla(216, 14%, 18%, 1); --charcoal-900: hsla(216, 13%, 12%, 1);
+    --midnight-navy-50: hsla(216, 55%, 96%, 1); --midnight-navy-100: hsla(216, 45%, 90%, 1); --midnight-navy-200: hsla(216, 40%, 80%, 1); --midnight-navy-300: hsla(216, 42%, 66%, 1); --midnight-navy-400: hsla(216, 48%, 48%, 1); --midnight-navy-500: hsla(216, 52%, 34%, 1); --midnight-navy-600: hsla(216, 55%, 24%, 1); --midnight-navy-700: hsla(216, 55%, 17%, 1); --midnight-navy-800: hsla(216, 55%, 12%, 1); --midnight-navy-900: hsla(216, 52%, 8%, 1);
+    --green-50: hsla(153, 50%, 95%, 1); --green-100: hsla(153, 48%, 89%, 1); --green-200: hsla(153, 46%, 80%, 1); --green-300: hsla(153, 48%, 68%, 1); --green-400: hsla(153, 52%, 54%, 1); --green-500: hsla(153, 54%, 40%, 1); --green-600: hsla(153, 52%, 32%, 1); --green-700: hsla(153, 50%, 25%, 1); --green-800: hsla(153, 48%, 19%, 1); --green-900: hsla(153, 46%, 13%, 1);
+    --amber-50: hsla(31, 80%, 95%, 1); --amber-100: hsla(31, 78%, 89%, 1); --amber-200: hsla(31, 76%, 79%, 1); --amber-300: hsla(31, 78%, 68%, 1); --amber-400: hsla(31, 78%, 55%, 1); --amber-500: hsla(31, 76%, 46%, 1); --amber-600: hsla(31, 74%, 38%, 1); --amber-700: hsla(31, 72%, 30%, 1); --amber-800: hsla(31, 68%, 23%, 1); --amber-900: hsla(31, 64%, 16%, 1);
+    --red-50: hsla(357, 72%, 95%, 1); --red-100: hsla(357, 70%, 89%, 1); --red-200: hsla(357, 68%, 80%, 1); --red-300: hsla(357, 70%, 69%, 1); --red-400: hsla(357, 68%, 53%, 1); --red-500: hsla(357, 66%, 45%, 1); --red-600: hsla(357, 64%, 38%, 1); --red-700: hsla(357, 62%, 31%, 1); --red-800: hsla(357, 58%, 24%, 1); --red-900: hsla(357, 54%, 17%, 1);
+    --slate-50: hsla(214, 18%, 95%, 1); --slate-100: hsla(214, 17%, 90%, 1); --slate-200: hsla(214, 17%, 82%, 1); --slate-300: hsla(214, 16%, 70%, 1); --slate-400: hsla(214, 17%, 58%, 1); --slate-500: hsla(214, 17%, 47%, 1); --slate-600: hsla(214, 18%, 37%, 1); --slate-700: hsla(214, 19%, 28%, 1); --slate-800: hsla(214, 20%, 20%, 1); --slate-900: hsla(214, 21%, 13%, 1);
+    --violet-50: hsla(254, 70%, 96%, 1); --violet-100: hsla(254, 66%, 90%, 1); --violet-200: hsla(254, 64%, 82%, 1); --violet-300: hsla(254, 66%, 72%, 1); --violet-400: hsla(254, 68%, 63%, 1); --violet-500: hsla(254, 64%, 54%, 1); --violet-600: hsla(254, 60%, 45%, 1); --violet-700: hsla(254, 56%, 36%, 1); --violet-800: hsla(254, 52%, 28%, 1); --violet-900: hsla(254, 48%, 20%, 1);
+  }
+
+  /* تم معنایی — همان themes/*.tokens.json */
+  [data-theme-sample='light'] {
+    --primary: var(--teal-700); --primary-hover: var(--teal-800); --on-primary: hsla(0,0%,100%,1); --secondary: var(--gold-500); --on-secondary: var(--midnight-navy-900); --accent: var(--sky-blue-500);
+    --text-primary: var(--charcoal-900); --text-secondary: var(--charcoal-700); --text-muted: var(--charcoal-600); --text-inverse: var(--charcoal-50);
+    --background: var(--charcoal-100); --surface: var(--charcoal-50); --surface-raised: hsla(0,0%,100%,1); --surface-sunken: var(--charcoal-200); --border: var(--charcoal-200); --border-strong: var(--charcoal-500);
+    --link: var(--sky-blue-700); --success: var(--green-700); --warning: var(--amber-700); --error: var(--red-700); --info: var(--sky-blue-700); --ai: var(--violet-700);
+    --success-subtle: hsla(153,54%,40%,0.12); --warning-subtle: hsla(31,78%,55%,0.14); --error-subtle: hsla(357,68%,53%,0.12); --info-subtle: hsla(210,88%,59%,0.12); --ai-subtle: hsla(254,68%,63%,0.12); --primary-subtle: hsla(183,84%,36%,0.10);
+    --on-success: hsla(0,0%,100%,1); --on-warning: hsla(0,0%,100%,1); --on-error: hsla(0,0%,100%,1); --on-info: hsla(0,0%,100%,1); --on-ai: hsla(0,0%,100%,1);
+  }
+  [data-theme-sample='dark'] {
+    --primary: var(--teal-400); --primary-hover: var(--teal-300); --on-primary: var(--teal-900); --secondary: var(--gold-400); --on-secondary: var(--midnight-navy-900); --accent: var(--sky-blue-400);
+    --text-primary: var(--charcoal-50); --text-secondary: var(--charcoal-300); --text-muted: var(--charcoal-400); --text-inverse: var(--charcoal-900);
+    --background: var(--midnight-navy-900); --surface: var(--midnight-navy-800); --surface-raised: var(--midnight-navy-700); --surface-sunken: hsla(216,55%,5%,1); --border: var(--midnight-navy-600); --border-strong: var(--midnight-navy-400);
+    --link: var(--sky-blue-400); --success: var(--green-400); --warning: var(--amber-300); --error: var(--red-300); --info: var(--sky-blue-400); --ai: var(--violet-300);
+    --success-subtle: hsla(153,54%,55%,0.16); --warning-subtle: hsla(31,78%,60%,0.16); --error-subtle: hsla(357,68%,60%,0.16); --info-subtle: hsla(210,88%,65%,0.11); --ai-subtle: hsla(254,68%,70%,0.16); --primary-subtle: hsla(183,84%,60%,0.16);
+    --on-success: var(--green-900); --on-warning: var(--amber-900); --on-error: var(--red-900); --on-info: var(--midnight-navy-900); --on-ai: var(--midnight-navy-900);
+  }
+
   * { box-sizing: border-box; margin: 0; padding: 0; }
-  body { font-family: 'Vazirmatn', Tahoma, sans-serif; background: #f5f5f4; color: #1c1917; padding: 40px 24px; }
-  .wrap { max-width: 1080px; margin: 0 auto; }
-  h1 { font-size: 1.8rem; margin-bottom: 8px; }
-  .sub { color: #57534e; margin-bottom: 32px; line-height: 1.8; }
-  .chip { display: inline-block; background: #e7e5e4; border-radius: 9999px; padding: 2px 12px; font-size: 0.8rem; margin-inline-start: 6px; }
+  body { font-family: 'Vazirmatn', Tahoma, sans-serif; background: var(--charcoal-50); color: var(--charcoal-900); padding: 40px 24px; }
+  .wrap { max-width: 1120px; margin: 0 auto; }
+  h1 { font-size: 1.7rem; margin-bottom: 8px; }
+  .sub { color: var(--charcoal-600); line-height: 1.8; margin-bottom: 32px; }
+  h2 { font-size: 1.15rem; margin: 40px 0 16px; }
+  code { font-family: ui-monospace, monospace; font-size: 0.85em; direction: ltr; background: var(--charcoal-100); padding: 1px 6px; border-radius: 4px; }
 
-  h2 { font-size: 1.15rem; margin: 40px 0 16px; color: #1c1917; }
+  .scale { margin-bottom: 20px; }
+  .scale-title { font-size: 0.85rem; font-weight: 500; margin-bottom: 6px; color: var(--charcoal-600); }
+  .swatches { display: grid; grid-template-columns: repeat(10, 1fr); gap: 2px; }
+  @media (max-width: 860px) { .swatches { grid-template-columns: repeat(5, 1fr); } }
+  .swatch { height: 52px; border-radius: 8px; display: flex; flex-direction: column; align-items: center; justify-content: flex-end; padding-bottom: 4px; gap: 1px; }
+  .swatch span { font-size: 0.58rem; direction: ltr; font-family: ui-monospace, monospace; }
+  .swatch .hsl { opacity: 0.75; font-size: 0.5rem; }
 
-  /* ردیف‌های مقایسه تم */
   .themes { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
-  @media (max-width: 800px) { .themes { grid-template-columns: 1fr; } }
+  @media (max-width: 860px) { .themes { grid-template-columns: 1fr; } }
   .panel { border-radius: 14px; padding: 24px; border: 1px solid; }
   .panel h3 { font-size: 0.95rem; margin-bottom: 16px; }
-  .light-panel { background: #fafaf9; border-color: #e7e5e4; color: #1c1917; }
-  .dark-panel { background: #0c0a09; border-color: #44403c; color: #fafaf9; }
-
-  /* اجزای دمو */
   .row { display: flex; flex-wrap: wrap; gap: 10px; align-items: center; margin-bottom: 14px; }
-  .btn { display: inline-flex; align-items: center; gap: 6px; height: 40px; padding: 0 16px; border-radius: 8px; font: inherit; font-size: 0.9rem; font-weight: 500; cursor: default; }
+  .btn { display: inline-flex; align-items: center; gap: 6px; height: 38px; padding: 0 16px; border-radius: 8px; font: inherit; font-size: 0.88rem; font-weight: 500; cursor: default; }
+  .badge { display: inline-flex; align-items: center; border-radius: 9999px; padding: 3px 11px; font-size: 0.76rem; font-weight: 500; }
+  .alert-item { border-radius: 8px; padding: 12px 14px; font-size: 0.84rem; margin-bottom: 8px; }
   .card { border-radius: 12px; border: 1px solid; padding: 16px; margin-top: 14px; }
-  .badge { display: inline-flex; align-items: center; gap: 6px; border-radius: 9999px; padding: 4px 12px; font-size: 0.78rem; font-weight: 500; }
-  .dot { width: 7px; height: 7px; border-radius: 9999px; background: currentColor; }
-  .muted { font-size: 0.85rem; margin-top: 4px; }
+  .muted { font-size: 0.82rem; opacity: 0.9; }
 
-  /* مقیاس‌ها */
-  .scale { margin-bottom: 18px; }
-  .scale-title { font-size: 0.85rem; font-weight: 500; margin-bottom: 6px; color: #57534e; }
-  .swatches { display: grid; grid-template-columns: repeat(11, 1fr); border-radius: 10px; overflow: hidden; border: 1px solid #e7e5e4; }
-  @media (max-width: 800px) { .swatches { grid-template-columns: repeat(6, 1fr); } }
-  .swatch { height: 56px; display: flex; align-items: flex-end; justify-content: center; padding-bottom: 4px; }
-  .swatch span { font-size: 0.58rem; direction: ltr; font-family: ui-monospace, monospace; }
-
-  /* جدول کنتراست */
-  table { width: 100%; border-collapse: collapse; font-size: 0.85rem; }
-  th, td { text-align: right; padding: 8px 12px; border-bottom: 1px solid #e7e5e4; }
-  th { color: #57534e; font-weight: 500; }
-  .ratio { font-family: ui-monospace, monospace; direction: ltr; text-align: left !important; }
-  .pass { color: #4f775e; font-weight: 700; }
-  .fail { color: #a3544c; font-weight: 700; }
-  footer { margin-top: 40px; font-size: 0.8rem; color: #78716c; line-height: 1.8; }
+  table { width: 100%; border-collapse: collapse; font-size: 0.82rem; }
+  th, td { text-align: right; padding: 7px 10px; border-bottom: 1px solid var(--charcoal-200); }
+  th { color: var(--charcoal-600); font-weight: 500; }
+  td code { background: none; padding: 0; }
+  .swatch-dot { display: inline-block; width: 14px; height: 14px; border-radius: 4px; margin-inline-start: 6px; vertical-align: -2px; border: 1px solid rgba(0,0,0,0.15); }
+  .ratio { font-family: ui-monospace, monospace; direction: ltr; text-align: left; }
+  .pass { color: var(--green-700); font-weight: 700; }
+  footer { margin-top: 40px; font-size: 0.8rem; color: var(--charcoal-500); line-height: 1.9; }
 </style>
 </head>
 <body>
 <div class="wrap">
-  <h1>🪶 پالت رنگی سیمرغ <span class="chip">نسخه ۱</span></h1>
+  <h1>🪶 سیستم رنگ سیمرغ — نسخه ۲</h1>
   <p class="sub">
-    فیروزه‌ایِ ملایم + خاکستری گرم + شخصیت مینیمال.<br />
-    این صفحه دقیقاً همان مقادیری را نشان می‌دهد که در <code>palette.tokens.json</code> و <code>themes/</code> قرار می‌گیرند.
+    ۱۰ خانواده × ۱۰ سطح در فرمت <code>hsla()</code> + توکن‌های معنایی دو تم — هماهنگ با
+    <code>packages/tokens/tokens/</code>. کنتراست ۵۶ جفت حیاتی در هر بیلد به‌صورت خودکار چک می‌شود.
   </p>
 
-  <h2>پیش‌نمایش رابط کاربری — هر دو تم</h2>
+  <h2>پیش‌نمایش رابط کاربری — دو تم</h2>
   <div class="themes">
-    <div class="panel light-panel" id="lightPanel"></div>
-    <div class="panel dark-panel" id="darkPanel"></div>
+    <div class="panel" data-theme-sample="light" style="background: var(--surface); border-color: var(--border); color: var(--text-primary);" id="lightPanel"></div>
+    <div class="panel" data-theme-sample="dark" style="background: var(--surface); border-color: var(--border); color: var(--text-primary);" id="darkPanel"></div>
   </div>
 
-  <h2>مقیاس رنگ‌ها</h2>
+  <h2>پالت خام — ۱۰ خانواده</h2>
   <div id="scales"></div>
+
+  <h2>توکن‌های معنایی — تم روشن</h2>
+  <table>
+    <thead><tr><th>توکن</th><th>مقدار</th><th>نمونه</th></tr></thead>
+    <tbody id="semanticRows"></tbody>
+  </table>
 
   <h2>کنتراست (WCAG) — جفت‌های حیاتی</h2>
   <table>
-    <thead><tr><th>جفت</th><th>نسبت</th><th>استاندارد متن (4.5:1)</th></tr></thead>
+    <thead><tr><th>جفت</th><th>نسبت</th><th>وضعیت (4.5:1)</th></tr></thead>
     <tbody id="contrastRows"></tbody>
   </table>
 
   <footer>
-    توکن نقش‌دار تم روشن: primary = teal.700 · warning = amber.700 (برای قبولی کنتراست) · متن = stone.900<br />
-    توکن نقش‌دار تم تیره: primary = teal.300 · سطح‌ها = stone.950/900
+    قاعده‌ی طلایی: کامپوننت فقط توکن معنایی می‌بیند (<code>bg-primary</code> ✅ / <code>bg-teal-700</code> ❌).<br />
+    توکن‌های شفاف (subtle / focus-ring / overlay) فقط در لایه‌ی معنایی تعریف می‌شوند؛ پالت خام همیشه opaque است.
   </footer>
 </div>
 
 <script>
-/* ===== همان مقادیر توکن — هماهنگ با palette.tokens.json ===== */
-const palette = {
-  teal:  { name: 'فیروزه‌ای — primary', steps: { 50:'#f4f8f7',100:'#e3efed',200:'#c5e0dc',300:'#9ccbc4',400:'#72b0a8',500:'#54968f',600:'#417b75',700:'#386360',800:'#2f4d4c',900:'#28403f',950:'#152423' } },
-  stone: { name: 'خاکستری گرم — neutral', steps: { 0:'#ffffff',50:'#fafaf9',100:'#f5f5f4',200:'#e7e5e4',300:'#d6d3d1',400:'#a8a29e',500:'#78716c',600:'#57534e',700:'#44403c',800:'#292524',900:'#1c1917',950:'#0c0a09' } },
-  green: { name: 'سبز ملایم — success', steps: { 50:'#f3f7f3',100:'#e5efe6',200:'#cbdfd0',300:'#a8c9b1',400:'#85b090',500:'#669376',600:'#4f775e',700:'#40614c',800:'#35503f',900:'#2c4235',950:'#142018' } },
-  amber: { name: 'کهربایی ملایم — warning', steps: { 50:'#faf7ef',100:'#f3ecd7',200:'#e6d7ae',300:'#d6bd7f',400:'#c7a455',500:'#b98e3c',600:'#9a7330',700:'#7c5c29',800:'#654b25',900:'#533e22',950:'#2a1f11' } },
-  red:   { name: 'قرمز آجری ملایم — danger', steps: { 50:'#fbf5f4',100:'#f6e8e6',200:'#eed0cc',300:'#e3b0aa',400:'#d48a82',500:'#bf6b62',600:'#a3544c',700:'#86453f',800:'#6f3a36',900:'#5d3230',950:'#2e1817' } },
-  slate: { name: 'آبی دودی ملایم — info', steps: { 50:'#f4f7f9',100:'#e8eef2',200:'#d1dde5',300:'#b0c5d3',400:'#84a4ba',500:'#6188a2',600:'#4c6f88',700:'#3f5b71',800:'#354c5e',900:'#2d404f',950:'#16212b' } },
-};
+const families = [
+  ['teal', 'فیروزه‌ای — primary'], ['gold', 'طلای امپراتوری — secondary'],
+  ['sky-blue', 'آبی آسمانی — accent/link'], ['charcoal', 'ذغالی — متن و خنثی'],
+  ['midnight-navy', 'سرمه‌ای — سطوح تیره'], ['green', 'سبز — success'],
+  ['amber', 'کهربایی — warning'], ['red', 'قرمز — error'],
+  ['slate', 'اسلیت — خنثی ملایم'], ['violet', 'بنفش — AI'],
+];
+const steps = ['50','100','200','300','400','500','600','700','800','900'];
+const hslaOf = (family, step) => getComputedStyle(document.documentElement).getPropertyValue(`--${family}-${step}`).trim();
 
-const light = { primary:'#386360', primaryHover:'#2f4d4c', onPrimary:'#ffffff', surface:'#fafaf9', raised:'#ffffff', text:'#1c1917', muted:'#57534e', border:'#e7e5e4', borderStrong:'#d6d3d1', success:'#4f775e', warning:'#7c5c29', danger:'#a3544c', info:'#4c6f88' };
-const dark  = { primary:'#9ccbc4', primaryHover:'#c5e0dc', onPrimary:'#152423', surface:'#0c0a09', raised:'#1c1917', text:'#fafaf9', muted:'#a8a29e', border:'#44403c', borderStrong:'#57534e', success:'#85b090', warning:'#c7a455', danger:'#d48a82', info:'#84a4ba' };
-
-/* ===== کنتراست WCAG ===== */
-function lum(hex) {
-  const c = hex.replace('#','');
-  const [r,g,b] = [0,2,4].map(i => parseInt(c.slice(i,i+2),16)/255)
-    .map(v => v <= 0.03928 ? v/12.92 : Math.pow((v+0.055)/1.055, 2.4));
-  return 0.2126*r + 0.7152*g + 0.0722*b;
-}
-function contrast(a, b) {
-  const [l1,l2] = [lum(a), lum(b)].sort((x,y)=>y-x);
-  return (l1+0.05)/(l2+0.05);
-}
-
-/* ===== پنل‌های دمو ===== */
-function panel(t, p) {
-  const btn = (bg, fg, label) => `<button class="btn" style="background:${bg};color:${fg};border:1px solid transparent">${label}</button>`;
+/* پنل‌های تم */
+function panel(theme) {
+  const isLight = theme === 'light';
+  const badge = (tone, text) => `<span class="badge" style="background: var(--${tone}${'' }); color: var(--on-${tone})">${text}</span>`;
   return `
-    <h3>${t === light ? '☀️ تم روشن' : '🌙 تم تیره'}</h3>
+    <h3>${isLight ? '☀️ تم روشن' : '🌙 تم تیره'}</h3>
     <div class="row">
-      ${btn(p.primary, p.onPrimary, 'ذخیره تغییرات')}
-      ${btn(p.raised, p.text, 'انصراف')}
-      <button class="btn" style="background:transparent;color:${p.primary};border:1px solid transparent">بیشتر بدانید</button>
+      <button class="btn" style="background: var(--primary); color: var(--on-primary)">ذخیره تغییرات</button>
+      <button class="btn" style="background: var(--surface-raised); color: var(--text-primary); border: 1px solid var(--border)">انصراف</button>
+      <button class="btn" style="background: var(--secondary); color: var(--on-secondary)">طرح ویژه</button>
+      <a style="color: var(--link); font-size: 0.88rem">لینک نمونه</a>
     </div>
     <div class="row">
-      <span class="badge" style="background:${p.success};color:${t === light ? '#ffffff' : '#142018'}"><span class="dot"></span>موفق</span>
-      <span class="badge" style="background:${p.warning};color:${t === light ? '#ffffff' : '#2a1f11'}"><span class="dot"></span>هشدار</span>
-      <span class="badge" style="background:${p.danger};color:${t === light ? '#ffffff' : '#2e1817'}"><span class="dot"></span>خطا</span>
-      <span class="badge" style="background:${p.info};color:${t === light ? '#ffffff' : '#16212b'}"><span class="dot"></span>اطلاعات</span>
+      <span class="badge" style="background: var(--success-subtle); color: var(--success)">موفق</span>
+      <span class="badge" style="background: var(--warning-subtle); color: var(--warning)">هشدار</span>
+      <span class="badge" style="background: var(--error-subtle); color: var(--error)">خطا</span>
+      <span class="badge" style="background: var(--info-subtle); color: var(--info)">اطلاع</span>
+      <span class="badge" style="background: var(--ai-subtle); color: var(--ai)">✦ هوش مصنوعی</span>
     </div>
-    <div class="card" style="background:${p.raised};border-color:${p.border}">
-      <div style="font-weight:700">کارت پرداخت</div>
-      <div class="muted" style="color:${p.muted}">مبلغ قابل پرداخت: ۲۴۵٬۰۰۰ تومان</div>
-      <div class="muted" style="color:${p.muted}">تاریخ: ۱۵ مهر ۱۴۰۵</div>
+    <div class="row">
+      ${badge('success', 'تحویل شده')} ${badge('error', 'لغو شده')} ${badge('ai', 'AI')}
+    </div>
+    <div class="alert-item" style="background: var(--error-subtle); color: var(--error)">■ پرداخت ناموفق بود — دوباره تلاش کنید.</div>
+    <div class="card" style="background: var(--surface-raised); border-color: var(--border)">
+      <div style="font-weight: 700">کارت پرداخت</div>
+      <div class="muted" style="color: var(--text-secondary)">مبلغ: ۲٬۴۵۰٬۰۰۰ تومان — ۱۵ مهر ۱۴۰۵</div>
+      <div class="muted" style="color: var(--text-muted)">متن خاموش (muted) روی سطح برجسته</div>
     </div>`;
 }
-document.getElementById('lightPanel').innerHTML = panel(light, light);
-document.getElementById('darkPanel').innerHTML = panel(dark, dark);
+document.getElementById('lightPanel').innerHTML = panel('light');
+document.getElementById('darkPanel').innerHTML = panel('dark');
 
-/* ===== مقیاس‌ها ===== */
-document.getElementById('scales').innerHTML = Object.values(palette).map(c => `
+/* مقیاس‌ها */
+document.getElementById('scales').innerHTML = families.map(([key, name]) => `
   <div class="scale">
-    <div class="scale-title">${c.name}</div>
+    <div class="scale-title">${name} — <code style="background:none;padding:0">${key}-50…900</code></div>
     <div class="swatches">
-      ${Object.entries(c.steps).map(([step, hex]) => {
-        const fg = contrast(hex, '#ffffff') >= 3 ? '#ffffff' : '#1c1917';
-        return `<div class="swatch" style="background:${hex}"><span style="color:${fg}">${step}</span></div>`;
+      ${steps.map((step) => {
+        const hsla = hslaOf(key, step);
+        const l = parseFloat(hsla.match(/,\s*([\d.]+)%/)[1]);
+        const fg = l > 55 ? '#1c1917' : '#ffffff';
+        const compact = hsla.replace(', 1)', ')').replace(/ /g, '');
+        return `<div class="swatch" style="background:${hsla}" title="${key}-${step}: ${compact}"><span style="color:${fg}">${step}</span><span class="hsl" style="color:${fg}">${compact.replace('hsla(', '').replace(/[()]/g, '')}</span></div>`;
       }).join('')}
     </div>
   </div>`).join('');
 
-/* ===== جدول کنتراست ===== */
-const pairs = [
-  ['متن روی سطح (روشن)', light.text, light.surface],
-  ['متن کم‌رنگ روی سطح (روشن)', light.muted, light.surface],
-  ['متنِ دکمه روی primary (روشن)', light.onPrimary, light.primary],
-  ['primary به‌عنوان متن/آیکون (روشن)', light.primary, light.surface],
-  ['success (روشن)', light.success, light.surface],
-  ['warning (روشن)', light.warning, light.surface],
-  ['danger (روشن)', light.danger, light.surface],
-  ['متن روی سطح (تیره)', dark.text, dark.surface],
-  ['متن کم‌رنگ روی سطح (تیره)', dark.muted, dark.surface],
-  ['متنِ دکمه روی primary (تیره)', dark.onPrimary, dark.primary],
-  ['primary به‌عنوان متن/آیکون (تیره)', dark.primary, dark.surface],
-  ['success (تیره)', dark.success, dark.surface],
-  ['warning (تیره)', dark.warning, dark.surface],
-  ['danger (تیره)', dark.danger, dark.surface],
+/* توکن‌های معنایی */
+const semanticTokens = [
+  ['color-primary', 'primary'], ['color-secondary', 'secondary'], ['color-accent', 'accent'],
+  ['color-text-primary', 'text-primary'], ['color-text-secondary', 'text-secondary'], ['color-text-muted', 'text-muted'],
+  ['color-background', 'background'], ['color-surface', 'surface'], ['color-surface-raised', 'surface-raised'], ['color-surface-sunken', 'surface-sunken'],
+  ['color-border', 'border'], ['color-border-strong', 'border-strong'],
+  ['color-link', 'link'], ['color-success', 'success'], ['color-warning', 'warning'],
+  ['color-error', 'error'], ['color-info', 'info'], ['color-ai', 'ai'],
+  ['color-primary-subtle', 'primary-subtle'], ['color-focus-ring', 'focus-ring'], ['color-overlay', 'overlay'],
 ];
-document.getElementById('contrastRows').innerHTML = pairs.map(([label, a, b]) => {
-  const r = contrast(a, b).toFixed(2);
+document.getElementById('semanticRows').innerHTML = semanticTokens.map(([name, cssVar]) => `
+  <tr><td><code style="background:none;padding:0">${name}</code></td>
+  <td><code id="sem-${cssVar}"></code></td>
+  <td><span class="swatch-dot" style="background: var(--${cssVar})"></span></td></tr>`).join('');
+semanticTokens.forEach(([, cssVar]) => {
+  const el = document.getElementById('sem-' + cssVar);
+  el.textContent = getComputedStyle(document.querySelector("[data-theme-sample='light']")).getPropertyValue(`--${cssVar}`).trim();
+});
+
+/* کنتراست */
+function luminance(color) {
+  const m = color.match(/hsla?\(([\d.]+),\s*([\d.]+)%,\s*([\d.]+)%/);
+  const h = +m[1], s = +m[2] / 100, l = +m[3] / 100;
+  const c = (1 - Math.abs(2 * l - 1)) * s, hp = h / 60;
+  const x = c * (1 - Math.abs((hp % 2) - 1)), m2 = l - c / 2;
+  let rgb = hp < 1 ? [c, x, 0] : hp < 2 ? [x, c, 0] : hp < 3 ? [0, c, x] : hp < 4 ? [0, x, c] : hp < 5 ? [x, 0, c] : [c, 0, x];
+  const lin = rgb.map((v) => { v += m2; return v <= 0.03928 ? v / 12.92 : Math.pow((v + 0.055) / 1.055, 2.4); });
+  return 0.2126 * lin[0] + 0.7152 * lin[1] + 0.0722 * lin[2];
+}
+function contrast(a, b) { const [l1, l2] = [luminance(a), luminance(b)].sort((x, y) => y - x); return (l1 + 0.05) / (l2 + 0.05); }
+const read = (scope, v) => getComputedStyle(document.querySelector(scope)).getPropertyValue(v).trim();
+const pairs = [
+  ['متن روی پس‌زمینه (روشن)', 'light', '--text-primary', '--background'],
+  ['متن خاموش روی سطح (روشن)', 'light', '--text-muted', '--surface'],
+  ['متن روی primary (روشن)', 'light', '--on-primary', '--primary'],
+  ['متن روی secondary (روشن)', 'light', '--on-secondary', '--secondary'],
+  ['لینک (روشن)', 'light', '--link', '--surface'],
+  ['success/error/info/ai (روشن)', 'light', '--success', '--surface'],
+  ['متن روی پس‌زمینه (تیره)', 'dark', '--text-primary', '--background'],
+  ['متن خاموش روی سطح (تیره)', 'dark', '--text-muted', '--surface'],
+  ['متن روی primary (تیره)', 'dark', '--on-primary', '--primary'],
+  ['لینک (تیره)', 'dark', '--link', '--background'],
+];
+document.getElementById('contrastRows').innerHTML = pairs.map(([label, theme, fg, bg]) => {
+  const scope = `[data-theme-sample='${theme}']`;
+  const r = contrast(read(scope, fg), read(scope, bg)).toFixed(2);
   const ok = parseFloat(r) >= 4.5;
-  return `<tr><td>${label}</td><td class="ratio">${r}:1</td><td class="${ok ? 'pass' : 'fail'}">${ok ? '✓ قبول' : '✗ رد'}</td></tr>`;
+  return `<tr><td>${label}</td><td class="ratio">${r}:1</td><td class="${ok ? 'pass' : ''}" style="${ok ? '' : 'color: var(--red-700); font-weight: 700'}">${ok ? '✓ قبول' : '✗ رد'}</td></tr>`;
 }).join('');
 </script>
 </body>

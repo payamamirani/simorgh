@@ -58,7 +58,7 @@ export const Field = ({
         <label htmlFor={controlId} className="text-caption font-medium text-text">
           {label}
           {required && (
-            <span aria-hidden="true" className="ms-0.5 text-danger">
+            <span aria-hidden="true" className="ms-0.5 text-error">
               *
             </span>
           )}
@@ -68,7 +68,7 @@ export const Field = ({
       {message && (
         <p
           id={messageId}
-          className={error ? 'text-caption text-danger' : 'text-caption text-text-muted'}
+          className={error ? 'text-caption text-error' : 'text-caption text-text-muted'}
         >
           {message}
         </p>

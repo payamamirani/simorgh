@@ -11,7 +11,7 @@ import { cn } from '../../utils/cn';
  *     <DropdownMenu.Label>عنوان گروه</DropdownMenu.Label>
  *     <DropdownMenu.Item>ویرایش</DropdownMenu.Item>
  *     <DropdownMenu.Separator />
- *     <DropdownMenu.Item tone="danger">حذف</DropdownMenu.Item>
+ *     <DropdownMenu.Item tone="error">حذف</DropdownMenu.Item>
  *   </DropdownMenu.Content>
  * </DropdownMenu>
  */
@@ -43,8 +43,8 @@ DropdownMenuContent.displayName = 'DropdownMenu.Content';
 export interface DropdownMenuItemProps
   extends Omit<DropdownMenuPrimitive.DropdownMenuItemProps, 'children'> {
   children?: React.ReactNode;
-  /** آیتم مخرب — رنگ danger */
-  tone?: 'default' | 'danger';
+  /** آیتم مخرب — رنگ error */
+  tone?: 'default' | 'error';
 }
 
 const DropdownMenuItem = forwardRef<HTMLDivElement, DropdownMenuItemProps>(
@@ -56,7 +56,7 @@ const DropdownMenuItem = forwardRef<HTMLDivElement, DropdownMenuItemProps>(
         'text-body text-text outline-none transition-colors',
         'focus-visible:outline-none data-[highlighted]:bg-border',
         'data-[disabled]:pointer-events-none data-[disabled]:opacity-50',
-        tone === 'danger' && 'text-danger data-[highlighted]:bg-danger/10',
+        tone === 'error' && 'text-error data-[highlighted]:bg-error/10',
         className,
       )}
       {...props}

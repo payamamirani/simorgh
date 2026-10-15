@@ -5,7 +5,7 @@ import type { InputSize } from '../Input/Input';
 
 export interface SelectProps extends Omit<SelectHTMLAttributes<HTMLSelectElement>, 'size'> {
   size?: InputSize;
-  /** حالت خطا — aria-invalid را تنظیم می‌کند و ظاهر را به رنگ danger تغییر می‌دهد */
+  /** حالت خطا — aria-invalid را تنظیم می‌کند و ظاهر را به رنگ error تغییر می‌دهد */
   invalid?: boolean;
   /** متن اولیه‌ی خالی — به‌صورت گزینه‌ی غیرقابل‌انتخاب رندر می‌شود */
   placeholder?: string;
@@ -15,9 +15,9 @@ const base =
   'inline-flex w-full appearance-none items-center rounded-md border border-border bg-surface-raised pe-9 ' +
   'text-text transition-colors motion-reduce:transition-none ' +
   'hover:border-border-strong ' +
-  'focus-visible:border-primary focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary/25 ' +
-  'aria-invalid:border-danger aria-invalid:hover:border-danger ' +
-  'aria-invalid:focus-visible:border-danger aria-invalid:focus-visible:ring-danger/25 ' +
+  'focus-visible:border-border-focus focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-focus-ring ' +
+  'aria-invalid:border-error aria-invalid:hover:border-error ' +
+  'aria-invalid:focus-visible:border-error aria-invalid:focus-visible:ring-error/30 ' +
   'disabled:pointer-events-none disabled:cursor-not-allowed disabled:bg-surface disabled:opacity-60';
 
 const sizes: Record<InputSize, string> = {

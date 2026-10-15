@@ -17,7 +17,7 @@ import {
  *   toast({ title: 'ذخیره شد', tone: 'success' })
  */
 
-export type ToastTone = 'success' | 'warning' | 'danger' | 'info';
+export type ToastTone = 'success' | 'warning' | 'error' | 'info';
 
 export interface ToastOptions {
   title: ReactNode;
@@ -44,23 +44,23 @@ const ToastContext = createContext<ToastContextValue | null>(null);
 let idCounter = 0;
 
 const tones: Record<ToastTone, string> = {
-  success: 'bg-success/12',
-  warning: 'bg-warning/12',
-  danger: 'bg-danger/12',
-  info: 'bg-info/12',
+  success: 'bg-success-subtle',
+  warning: 'bg-warning-subtle',
+  error: 'bg-error-subtle',
+  info: 'bg-info-subtle',
 };
 
 const iconTones: Record<ToastTone, string> = {
   success: 'text-success',
   warning: 'text-warning',
-  danger: 'text-danger',
+  error: 'text-error',
   info: 'text-info',
 };
 
 const icons: Record<ToastTone, ReactNode> = {
   success: <CheckIcon />,
   warning: <AlertTriangleIcon />,
-  danger: <AlertCircleIcon />,
+  error: <AlertCircleIcon />,
   info: <InfoIcon />,
 };
 
@@ -103,7 +103,7 @@ export function Toaster() {
         {items.map((item) => (
           <ToastPrimitive.Root
             key={item.id}
-            role={item.tone === 'danger' ? 'alert' : 'status'}
+            role={item.tone === 'error' ? 'alert' : 'status'}
             className={cn(
               'pointer-events-auto flex w-full items-start gap-3 rounded-md p-4 shadow-md',
               'border border-border bg-surface-raised',
@@ -126,8 +126,8 @@ export function Toaster() {
               aria-label="بستن"
               className={cn(
                 'inline-flex size-6 shrink-0 items-center justify-center rounded-sm',
-                'text-text-muted transition-colors hover:bg-border hover:text-text',
-                'focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary/25',
+                'text-text-muted transition-colors hover:bg-surface-sunken hover:text-text',
+                'focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-focus-ring',
               )}
             >
               <XIcon size="sm" />

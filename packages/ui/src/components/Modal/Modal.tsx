@@ -27,7 +27,7 @@ const ModalContent = forwardRef<HTMLDivElement, ModalContentProps>(
     <DialogPrimitive.Portal>
       <DialogPrimitive.Overlay
         className={cn(
-          'fixed inset-0 z-40 bg-text/45',
+          'fixed inset-0 z-40 bg-overlay',
           'motion-reduce:transition-none',
         )}
       />
@@ -47,8 +47,8 @@ const ModalContent = forwardRef<HTMLDivElement, ModalContentProps>(
           className={cn(
             'absolute end-4 top-4 inline-flex size-8 items-center justify-center rounded-md',
             'text-text-muted transition-colors motion-reduce:transition-none',
-            'hover:bg-border hover:text-text',
-            'focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary/25',
+            'hover:bg-surface-sunken hover:text-text',
+            'focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-focus-ring',
           )}
         >
           <XIcon size="sm" />

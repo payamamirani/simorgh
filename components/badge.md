@@ -10,7 +10,7 @@
 
 | نام | نوع | پیش‌فرض | توضیح |
 |---|---|---|---|
-| `tone` | `neutral` \| `primary` \| `success` \| `warning` \| `danger` \| `info` | `neutral` | رنگ معنایی |
+| `tone` | `neutral` \| `primary` \| `success` \| `warning` \| `error` \| `info` | `neutral` | رنگ معنایی |
 | `variant` | `soft` \| `solid` | `soft` | ملایم / پررنگ |
 
 ## دسترس‌پذیری

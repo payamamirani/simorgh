@@ -28,7 +28,7 @@ export const Avatar = forwardRef<HTMLSpanElement, AvatarProps>(
       ref={ref}
       className={cn(
         'relative inline-flex shrink-0 select-none items-center justify-center overflow-hidden rounded-full',
-        'bg-primary/12 text-primary',
+        'bg-primary-subtle text-primary',
         sizes[size],
         className,
       )}

@@ -10,16 +10,16 @@ describe('Badge', () => {
 
   it('حالت soft رنگ ملایم می‌گیرد', () => {
     render(<Badge tone="success">موفق</Badge>);
-    expect(screen.getByText('موفق')).toHaveClass('bg-success/12', 'text-success');
+    expect(screen.getByText('موفق')).toHaveClass('bg-success-subtle', 'text-success');
   });
 
   it('حالت solid رنگ متن on-* می‌گیرد (کنتراست توکنی)', () => {
     render(
-      <Badge tone="danger" variant="solid">
+      <Badge tone="error" variant="solid">
         خطا
       </Badge>,
     );
-    expect(screen.getByText('خطا')).toHaveClass('bg-danger', 'text-on-danger');
+    expect(screen.getByText('خطا')).toHaveClass('bg-error', 'text-on-error');
   });
 
   it('به‌صورت span رندر می‌شود', () => {

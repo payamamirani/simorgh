@@ -105,12 +105,18 @@ function* walk(obj, trail = []) {
 
 /** نگاشت مسیر توکن به کلید تم Tailwind */
 function tailwindKey(pathSegments) {
-  // simorgh.color.primary  → --color-primary
-  // simorgh.radius.md      → --radius-md
-  // simorgh.shadow.md      → --shadow-md
-  // simorgh.font.family.fa → --font-fa (نام‌گذاری ویژه)
-  // simorgh.font.size.body → --text-body (نام‌گذاری ویژه)
+  // simorgh.color.primary       → --color-primary
+  // simorgh.color.surface.raised → --color-surface-raised
+  // simorgh.color.text.primary  → --color-text (استثنا: حفظ یوتیلیتی text-text)
+  // simorgh.color.text.muted    → --color-text-muted
+  // simorgh.radius.md           → --radius-md
+  // simorgh.shadow.md           → --shadow-md
+  // simorgh.font.family.fa      → --font-fa (نام‌گذاری ویژه)
+  // simorgh.font.size.body      → --text-body (نام‌گذاری ویژه)
   const rest = pathSegments.slice(1);
+  if (rest[0] === 'color' && rest[1] === 'text' && rest[2] === 'primary') {
+    return '--color-text';
+  }
   if (rest[0] === 'font' && rest[1] === 'family') return `--font-${rest[2]}`;
   if (rest[0] === 'font' && rest[1] === 'size') return `--text-${rest[2]}`;
   if (rest[0] === 'font' && rest[1] === 'weight') return `--font-weight-${rest[2]}`;
