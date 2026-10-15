@@ -1,6 +1,6 @@
 {
   "name": "@simorgh/tokens",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "توکن‌های طراحی سیمرغ — منبع اصلی حقیقت (Single Source of Truth)",
   "type": "module",
   "license": "MIT",
