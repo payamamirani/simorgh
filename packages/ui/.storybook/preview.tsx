@@ -5,6 +5,10 @@ import '../src/index.css';
  * تنظیمات سراسری Storybook سیمرغ:
  * - پیش‌فرض: راست‌به‌چپ + فارسی + تم روشن
  * - از نوار بالای ابزار قابل تغییرند (تم، جهت)
+ *
+ * نکته: پس‌زمینه‌ی بوم از طریق backgrounds خود Storybook ست می‌شود
+ * (در SB 9+ این قابلیت هسته است و با inline style روی بوم اعمال می‌شود).
+ * مقدار آن var(--simorgh-color-background) است تا خودکار با تم فعال عوض شود.
  */
 const preview: Preview = {
   initialGlobals: {
@@ -13,7 +17,7 @@ const preview: Preview = {
   },
   globalTypes: {
     theme: {
-      description: 'تم رنگی',
+      description: 'تم رنگی — پس‌زمینه‌ی بوم هم دنبال می‌کند',
       toolbar: {
         title: 'تم',
         items: [
@@ -35,6 +39,16 @@ const preview: Preview = {
       },
     },
   },
+  parameters: {
+    // پس‌زمینه‌ی بوم — مقدار متغیری که با data-theme روی <html> عوض می‌شود
+    backgrounds: {
+      default: 'سیمرغ',
+      values: [
+        { name: 'سیمرغ', value: 'var(--simorgh-color-background)' },
+      ],
+      grid: { disable: true },
+    },
+  },
   decorators: [
     (Story, context) => {
       const { theme, dir } = context.globals;
@@ -42,8 +56,9 @@ const preview: Preview = {
       root.setAttribute('data-theme', theme ?? 'light');
       root.setAttribute('dir', dir ?? 'rtl');
       root.setAttribute('lang', dir === 'ltr' ? 'en' : 'fa');
-      // پس‌زمینه و متن بوم Storybook از توکن‌های تم فعال
-      document.body.style.backgroundColor = 'var(--simorgh-color-background)';
+      // اسکرول‌بار و کنترل‌های بومی مرورگر هم با تم هماهنگ شوند
+      root.style.colorScheme = theme === 'dark' ? 'dark' : 'light';
+      // متن بوم از توکن تم فعال (پس‌زمینه را backgrounds مدیریت می‌کند)
       document.body.style.color = 'var(--simorgh-color-text-primary)';
       return <Story />;
     },
