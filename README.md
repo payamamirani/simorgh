@@ -86,7 +86,8 @@ pnpm test
 - [x] کامپوننت ترکیبی: Card
 - [x] کامپوننت‌های فرم: Field، Textarea، Select، Checkbox (Radix)
 - [x] کامپوننت‌های سطح بعد: Modal، Radio، Tabs، Alert
-- [ ] کامپوننت‌های آینده: Toast، Switch، Tooltip، Combobox، Grid
+- [x] تکمیل مجموعه: Toast، Switch، Tooltip، Popover، Spinner، Progress، Skeleton، Separator، Avatar، Accordion، DropdownMenu، Grid، Table، VisuallyHidden، Kbd، Code
+- [ ] کامپوننت‌های آینده (در صورت نیاز): Combobox، Pagination، Breadcrumbs
 - [ ] تست بصری (Chromatic)
 - [x] آماده‌سازی انتشار: Changesets + ورک‌فلو Release (نیازمند NPM_TOKEN و مالکیت scope)
 

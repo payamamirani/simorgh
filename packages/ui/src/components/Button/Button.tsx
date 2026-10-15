@@ -1,6 +1,7 @@
 import { forwardRef, type ButtonHTMLAttributes } from 'react';
 import { Slot } from '@radix-ui/react-slot';
 import { cn } from '../../utils/cn';
+import { Spinner } from '../../components/Spinner/Spinner';
 
 export type ButtonVariant = 'primary' | 'secondary' | 'ghost';
 export type ButtonSize = 'sm' | 'md' | 'lg';
@@ -56,26 +57,7 @@ export const Button = forwardRef<HTMLButtonElement, ButtonProps>(
     // در حالت asChild باید تنها فرزند، المان مصرف‌کننده باشد (Spinner نباید اضافه شود)
     const content = loading && !asChild ? (
       <>
-        <svg
-          className="size-4 motion-safe:animate-spin"
-          viewBox="0 0 24 24"
-          fill="none"
-          aria-hidden="true"
-        >
-          <circle
-            cx="12"
-            cy="12"
-            r="10"
-            stroke="currentColor"
-            strokeWidth="4"
-            className="opacity-25"
-          />
-          <path
-            d="M4 12a8 8 0 0 1 8-8V0C5.373 0 0 5.373 0 12h4z"
-            fill="currentColor"
-            className="opacity-75"
-          />
-        </svg>
+        <Spinner size="sm" />
         {children}
       </>
     ) : (
