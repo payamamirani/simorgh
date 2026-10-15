@@ -85,7 +85,8 @@ pnpm test
 - [x] کامپوننت‌های سطح اول: Button، Input، Text، Heading، Stack، Icon (+۵ آیکون)، Badge
 - [x] کامپوننت ترکیبی: Card
 - [x] کامپوننت‌های فرم: Field، Textarea، Select، Checkbox (Radix)
-- [ ] کامپوننت‌های سطح بعد: Modal، Radio، Combobox، Grid
+- [x] کامپوننت‌های سطح بعد: Modal، Radio، Tabs، Alert
+- [ ] کامپوننت‌های آینده: Toast، Switch، Tooltip، Combobox، Grid
 - [ ] تست بصری (Chromatic)
 - [x] آماده‌سازی انتشار: Changesets + ورک‌فلو Release (نیازمند NPM_TOKEN و مالکیت scope)
 

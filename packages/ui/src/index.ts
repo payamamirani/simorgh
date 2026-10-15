@@ -38,3 +38,26 @@ export { Checkbox } from './components/Checkbox/Checkbox';
 export type { CheckboxProps } from './components/Checkbox/Checkbox';
 
 export { MinusIcon } from './components/Icon/icons';
+export {
+  AlertCircleIcon,
+  AlertTriangleIcon,
+  InfoIcon,
+} from './components/Icon/icons';
+
+export { Modal } from './components/Modal/Modal';
+export type {
+  ModalProps,
+  ModalTriggerProps,
+  ModalCloseProps,
+  ModalContentProps,
+  ModalPartProps,
+} from './components/Modal/Modal';
+
+export { RadioGroup, Radio } from './components/Radio/Radio';
+export type { RadioGroupProps, RadioProps } from './components/Radio/Radio';
+
+export { Tabs } from './components/Tabs/Tabs';
+export type { TabsProps } from './components/Tabs/Tabs';
+
+export { Alert } from './components/Alert/Alert';
+export type { AlertProps, AlertTone } from './components/Alert/Alert';
