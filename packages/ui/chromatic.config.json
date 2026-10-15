@@ -1,0 +1,8 @@
+{
+  "$schema": "https://www.chromatic.com/docs/json-schema",
+  "buildScriptName": "build-storybook",
+  "exitZeroOnChanges": true,
+  "onlyChanged": false,
+  "skip": "dependabot/**",
+  "repositoryUrl": "https://github.com/payamamirani/simorgh"
+}

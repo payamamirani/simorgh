@@ -1,0 +1,35 @@
+name: Chromatic
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  chromatic:
+    name: Visual Tests
+    runs-on: ubuntu-latest
+    # برای PR از فورک، توکن در دسترس نیست
+    if: ${{ github.event_name != 'pull_request' || github.event.pull_request.head.repo.full_name == github.repository }}
+    steps:
+      - name: Checkout (تاریخچه کامل برای مقایسه‌ی بیس‌لاین)
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 24
+          cache: pnpm
+
+      - name: Install dependencies
+        run: pnpm install --frozen-lockfile
+
+      - name: Run Chromatic
+        run: pnpm chromatic
+        env:
+          CHROMATIC_PROJECT_TOKEN: ${{ secrets.CHROMATIC_PROJECT_TOKEN }}

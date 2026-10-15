@@ -87,6 +87,7 @@ pnpm test
 - [x] کامپوننت‌های فرم: Field، Textarea، Select، Checkbox (Radix)
 - [x] کامپوننت‌های سطح بعد: Modal، Radio، Tabs، Alert
 - [x] تکمیل مجموعه: Toast، Switch، Tooltip، Popover، Spinner، Progress، Skeleton، Separator، Avatar، Accordion، DropdownMenu، Grid، Table، VisuallyHidden، Kbd، Code
+- [x] تست بصری (Chromatic) — ورک‌فلو آماده، نیازمند توکن
 - [ ] کامپوننت‌های آینده (در صورت نیاز): Combobox، Pagination، Breadcrumbs
 - [ ] تست بصری (Chromatic)
 - [x] آماده‌سازی انتشار: Changesets + ورک‌فلو Release (نیازمند NPM_TOKEN و مالکیت scope)
@@ -104,6 +105,26 @@ pnpm release            # بیلد + انتشار به npm
 ورک‌فلو `.github/workflows/release.yml` این کار را خودکار می‌کند: هر push به `main` با changeset باز → یک Pull Request نسخه می‌سازد؛ merge آن PR → انتشار به npm.
 
 > پیش‌نیاز انتشار: ثبت‌نام npm با مالکیت scope `simorgh` (یا تغییر نام پکیج‌ها) و افزودن `NPM_TOKEN` به Secrets ریپو.
+
+## تست بصری (Chromatic)
+
+هر تغییر ظاهری ناخواسته در کامپوننت‌ها با [Chromatic](https://www.chromatic.com) گرفته می‌شود — اسکرین‌شات همه‌ی استوری‌ها در هر PR و مقایسه پیکسل‌به‌پیکسل با قبل.
+
+### راه‌اندازی (یک‌بار)
+
+1. در [chromatic.com](https://www.chromatic.com) با گیت‌هاب ثبت‌نام کن
+2. **Add project** → ریپوی `simorgh` را انتخاب کن (فریمورک خودکار شناسایی می‌شود)
+3. توکن پروژه را کپی کن → در گیت‌هاب: **Settings → Secrets and variables → Actions → New repository secret** با نام `CHROMATIC_PROJECT_TOKEN`
+
+از آن پس ورک‌فلو `chromatic.yml` در هر PR اجرا می‌شود و لینک بررسی تغییرات بصری را کامنت می‌کند.
+
+### جریان کار با Chromatic
+
+- **PR جدید** → Chromatic استوری‌های تغییرکرده را علامت می‌زند (قبل/بعد کنار هم)
+- **تأیید در UI کروماتیک** → تصویر جدید، بیس‌لاین می‌شود
+- اجرای محلی: `pnpm --filter @simorgh/ui chromatic`
+
+> نکته: برای گرفتن نتیجه در **هر دو تم و هر دو جهت**، در تنظیمات پروژه‌ی Chromatic بخش **Modes** را با ترکیب‌های `theme:light|dark` و `dir:rtl|ltr` پیکربندی کن — تولبار Storybook ما این globals را می‌فهمد.
 
 ## نحوه استفاده
 
