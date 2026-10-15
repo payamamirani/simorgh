@@ -27,15 +27,19 @@ const sizes: Record<InputSize, string> = {
 };
 
 export const Input = forwardRef<HTMLInputElement, InputProps>(
-  ({ size = 'md', invalid = false, className, type = 'text', ...props }, ref) => (
-    <input
-      ref={ref}
-      type={type}
-      aria-invalid={invalid || undefined}
-      className={cn(base, sizes[size], className)}
-      {...props}
-    />
-  ),
+  ({ size = 'md', invalid = false, className, type = 'text', ...props }, ref) => {
+    // aria-invalid می‌تواند از Field هم تزریق شده باشد — ادغام می‌شود نه جایگزین
+    const ariaInvalid = invalid || Boolean(props['aria-invalid']);
+    return (
+      <input
+        ref={ref}
+        type={type}
+        aria-invalid={ariaInvalid || undefined}
+        className={cn(base, sizes[size], className)}
+        {...props}
+      />
+    );
+  },
 );
 
 Input.displayName = 'Input';

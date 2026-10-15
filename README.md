@@ -82,11 +82,26 @@ pnpm test
 - [x] توکن‌های پایه (رنگ، فونت، سایه، شعاع گوشه)
 - [x] زیرساخت: monorepo + خط لوله‌ی توکن + Storybook + CI
 - [x] پالت رنگ نسخه ۱ (فیروزه‌ای ملایم + خاکستری گرم + چک خودکار کنتراست WCAG)
-- [x] کامپوننت‌های سطح اول: Button، Input، Text، Heading، Stack، Icon (+۴ آیکون)، Badge
+- [x] کامپوننت‌های سطح اول: Button، Input، Text، Heading، Stack، Icon (+۵ آیکون)، Badge
 - [x] کامپوننت ترکیبی: Card
-- [ ] کامپوننت‌های سطح بعد: Modal، Select، Checkbox، Textarea، Field (فرم)
+- [x] کامپوننت‌های فرم: Field، Textarea، Select، Checkbox (Radix)
+- [ ] کامپوننت‌های سطح بعد: Modal، Radio، Combobox، Grid
 - [ ] تست بصری (Chromatic)
-- [ ] انتشار پکیج‌ها به npm
+- [x] آماده‌سازی انتشار: Changesets + ورک‌فلو Release (نیازمند NPM_TOKEN و مالکیت scope)
+
+## انتشار (Publish)
+
+چرخه‌ی نسخه‌ها با [Changesets](https://github.com/changesets/changesets) مدیریت می‌شود:
+
+```bash
+pnpm changeset          # توصیف تغییرات + تعیین سطح (patch/minor/major)
+pnpm version-packages   # اعمال تغییرات و تولید CHANGELOG
+pnpm release            # بیلد + انتشار به npm
+```
+
+ورک‌فلو `.github/workflows/release.yml` این کار را خودکار می‌کند: هر push به `main` با changeset باز → یک Pull Request نسخه می‌سازد؛ merge آن PR → انتشار به npm.
+
+> پیش‌نیاز انتشار: ثبت‌نام npm با مالکیت scope `simorgh` (یا تغییر نام پکیج‌ها) و افزودن `NPM_TOKEN` به Secrets ریپو.
 
 ## نحوه استفاده
 

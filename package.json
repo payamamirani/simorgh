@@ -12,6 +12,12 @@
     "test": "pnpm -r run test",
     "typecheck": "pnpm -r run typecheck",
     "storybook": "pnpm --filter @simorgh/ui storybook",
-    "build-storybook": "pnpm --filter @simorgh/ui build-storybook"
+    "build-storybook": "pnpm --filter @simorgh/ui build-storybook",
+    "changeset": "changeset",
+    "version-packages": "changeset version",
+    "release": "pnpm build && changeset publish"
+  },
+  "devDependencies": {
+    "@changesets/cli": "^3.0.3"
   }
 }

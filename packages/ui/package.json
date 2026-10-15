@@ -3,6 +3,15 @@
   "version": "0.1.0",
   "description": "کامپوننت‌های رابط کاربری سیستم دیزاین سیمرغ",
   "type": "module",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/payamam/simorgh.git",
+    "directory": "packages/ui"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
   "main": "./dist/simorgh-ui.mjs",
   "module": "./dist/simorgh-ui.mjs",
   "types": "./dist/index.d.ts",
@@ -31,6 +40,7 @@
     "react-dom": "^18.0.0 || ^19.0.0"
   },
   "dependencies": {
+    "@radix-ui/react-checkbox": "^1.4.1",
     "@radix-ui/react-slot": "^1.2.0",
     "@simorgh/tokens": "workspace:*"
   },

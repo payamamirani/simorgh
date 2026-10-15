@@ -24,3 +24,17 @@ export type { CardProps, CardPartProps } from './components/Card/Card';
 
 export { Badge } from './components/Badge/Badge';
 export type { BadgeProps, BadgeTone, BadgeVariant } from './components/Badge/Badge';
+
+export { Field } from './components/Field/Field';
+export type { FieldProps } from './components/Field/Field';
+
+export { Textarea } from './components/Textarea/Textarea';
+export type { TextareaProps } from './components/Textarea/Textarea';
+
+export { Select } from './components/Select/Select';
+export type { SelectProps } from './components/Select/Select';
+
+export { Checkbox } from './components/Checkbox/Checkbox';
+export type { CheckboxProps } from './components/Checkbox/Checkbox';
+
+export { MinusIcon } from './components/Icon/icons';

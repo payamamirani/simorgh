@@ -3,6 +3,15 @@
   "version": "0.1.0",
   "description": "توکن‌های طراحی سیمرغ — منبع اصلی حقیقت (Single Source of Truth)",
   "type": "module",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/payamam/simorgh.git",
+    "directory": "packages/tokens"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
   "exports": {
     ".": {
       "types": "./dist/js/tokens.d.ts",
