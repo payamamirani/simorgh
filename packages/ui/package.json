@@ -6,7 +6,7 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/payamam/simorgh.git",
+    "url": "git+https://github.com/payamamirani/simorgh.git",
     "directory": "packages/ui"
   },
   "publishConfig": {
